@@ -1,0 +1,417 @@
+Notes for 9/4/2014
+Today we will go over if statements.
+
+int a = 1;
+if (a == 2) {
+	//do one thing
+}
+else if (a == 3) {
+	//do something else
+} else {
+	//in all other cases do this.
+}
+
+For example:
+
+public class LettersToFruit {
+
+	public static void main (String[] args) {
+		if (args[0].equals("a")) {
+			System.out.println("Apple");
+		} else if (args[0].equals("b") {
+			System.out.println("Banana");
+		} else {
+			System.out.println("I don't know this letter.");
+		}
+	}
+}
+
+//Questionable Practice (Ternary operator)
+//? : operator
+//use only in simple statements
+
+Example:
+//initial stab
+public class IntsCalcV1 {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		if (a > 0) {
+			System.out.println(3*a);
+		} else {
+			System.out.println(2*a);
+		}
+	}
+}
+
+//improvement
+public class IntsCalcV2 {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		int z;
+		if (a > 0) {
+			z = 3*a;
+		} else {
+			z = 2*a;
+		}
+		System.out.println(z);
+	}
+}
+
+//smaller amount of code
+public class IntsCalcV3 {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		int z = a > 0 ? 3*a : 2*a;
+		System.out.println(z);
+	}
+}
+
+//even smaller amount of code
+public class IntsCalcV4 {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		System.out.println(a > 0 ? 3*a : 2*a); //the limit of acceptable complexity
+	}
+}
+
+//Now speaking of getting smaller amounts of code, there are other options we can do. such as reducing the number
+//of curly braces (not recommended) as this leads to reduced clarity
+Example: 
+public class IntsCalcNoBraces {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		if (a > 0)
+			System.out.println(3*a);
+		else
+			System.out.println(2*a);
+	}
+}
+Example of hard to understand:
+public class IntsCalcNoBracesUnknown {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		if (a > 0)
+			if (a % 2 == 0)
+				System.out.println(3*a);
+		else
+			System.out.println(2*a);
+	}
+}
+//its unclear what happens thats why we use curly braces to provide clear clarity as to what happens in the code
+//good practice
+//always use curly braces to open and close an if statement (it makes your intent very clear)
+
+
+
+loops
+
+while loop
+
+while loops with counters
+
+//showing evolution of code quality
+//grading system problem base case
+public class GradingSystemV1 {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int sum = 0;
+		sum += scanner.nextInt();
+		sum += scanner.nextInt();
+		sum += scanner.nextInt();
+		System.out.println("Average = " + sum/3);
+	}
+}
+
+//better improvement through use of a while loop
+//where is the error in my code?
+public class GradingSystemV2 {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int sum = 0;
+		int counter = 0;
+		while (counter < 5) {
+			sum += scanner.nextInt();
+			//counter = counter + 1;
+		}
+		System.out.println("Average = " + sum/5);
+	}
+}
+
+//here we improve it by having a single variable to track everything
+public class GradingSystemV3 {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int numbGrades = 5;
+		int sum = 0;
+		int counter = 0;
+		while (counter < numbGrades) {
+			sum += scanner.nextInt();
+			counter = counter + 1;
+		}
+		System.out.println("Average = " + sum/numbGrades);
+	}
+}
+
+//sometimes we want to have some well known short hand to make coding occur quicker.
+//in essence this sacrifices some readibility for quickness (however because these are done so often
+//in coding it is considered acceptable
+public class GradingSystemV3 {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int numbGrades = 5;
+		int sum = 0;
+		int counter = 0;
+		while (counter < numbGrades) {
+			sum += scanner.nextInt();
+			++counter;
+		}
+		System.out.println("Average = " + sum/numbGrades);
+	}
+}
+
+//Note ++counter is short hand for counter = counter + 1;
+
+//integer casting
+//note you can cast between types using
+//Integer.parseInt();
+//Double.parseDouble();
+//Double.intValue();
+//etc...
+//String s; s.charAt(3);
+//(char) 1;
+//(int) 'f';
+
+++
++=
+-=
+/=
+*=
+
+prefix increment
+//allows you to use the value before incrementing it
+example:
+public class Numbers {
+	public static void main (String[] args) {
+		int a = 0;
+		int b = 0;
+		int y = 4;
+		int z = 4;
+		y = x++;
+		z = ++b;
+		System.out.println("y = " + y);
+		System.out.println("z = " + z);
+	}
+}
+//what gets printed?
+
+postfix increment
+//who can tell me the difference between the two?
+//if you are doing each on their own line which is better?
+public class GradingSystemV3 {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int numbGrades = 5;
+		int sum = 0;
+		int counter = 0;
+		while (counter < numbGrades) {
+			sum += scanner.nextInt();
+			++counter; //or counter++
+		}
+		System.out.println("Average = " + sum/numbGrades);
+	}
+}
+
+
+for loops
+//equivalence to while loops
+//converting our grading system to use a for loop
+Example:
+public class GradingSystemWhileLoop {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int numbGrades = 5;
+		int sum = 0;
+		int counter = 0;
+		while (counter < numbGrades) {
+			sum += scanner.nextInt();
+			++counter;
+		}
+		System.out.println("Average = " + sum/numbGrades);
+	}
+}
+
+//improved version
+public class GradingSystemForLoop {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int numbGrades = 5;
+		int sum = 0;
+		for (int counter = 0; counter < numbGrades; ++counter) {
+			sum += scanner.nextInt();
+		}
+		System.out.println("Average = " + sum/numbGrades);
+	}
+}
+
+//programmer standard
+public class GradingSystemForLoopV2 {
+	public static void main (String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int numbGrades = 5;
+		int sum = 0;
+		for (int i = 0; i < numbGrades; ++i) {
+			sum += scanner.nextInt();
+		}
+		System.out.println("Average = " + sum/numbGrades);
+	}
+}
+
+//do while loop
+
+//do {
+
+//} while (a...)
+//allows you to execute a single run before checking the condition
+public class GradingSystemForLoopV2 {
+	public static void main (String[] args) {
+		int sum = 0;
+		int counter = 1;
+		do {
+			sum += 4;
+		} while (counter > 0);
+		
+		System.out.println("Sum = " + sum);
+	}
+}
+//what is the output?
+
+
+
+//switch statements
+switch (grade/10) 
+{
+	case 9:
+		do stuff
+		break;
+	case 10:
+	
+	default:
+		break;
+}
+//allows you to have multiple cases but it is all based on the same type
+Example:
+public class LettersToFruitSwitch {
+
+	public static void main (String[] args) {
+		char c = Character.parseCharacter(args[0]); //or just args[0].charAt(0);
+		switch (c) {
+			case 'a':
+			case 'b':
+				System.out.println("Apple");
+			case 'c':
+				System.out.println("Banana");
+			default:
+				System.out.println("I don't know this letter.");
+		}
+	}
+}
+
+//here we need some sort of break statement, otherwise our code falls through and continues to execute;
+break;
+continue;
+
+public class LettersToFruitSwitchV2 {
+
+	public static void main (String[] args) {
+		char c = Character.parseCharacter(args[0]); //or just args[0].charAt(0);
+		switch (c) {
+			case 'a':
+				break;
+			case 'b':
+				System.out.println("Apple");
+				break;
+			case 'c':
+				System.out.println("Banana");
+				break;
+			default:
+				System.out.println("I don't know this letter.");
+		}
+	}
+}
+
+
+
+
+break;
+continue;
+
+//Logical AND and OR
+//used when we want to have more sophisticated if statements
+&&
+
+||
+Example:
+public class IntsCalcNoBracesUnknown {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		if (a > 0)
+			if (a % 2 == 0)
+				System.out.println(3*a);
+		else
+			System.out.println(2*a);
+	}
+}
+
+//improved version
+public class IntsCalc {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		if (a > 0 && a % 2 == 0) {
+			System.out.println(3*a);
+		} else {
+			System.out.println(2*a);
+		}
+	}
+}
+
+//or to do something else
+public class IntsCalc {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		if (a > 0 || a % 2 == 0) {
+			System.out.println(3*a);
+		} else {
+			System.out.println(2*a);
+		}
+	}
+}
+
+//truth tables 
+//how to determine the outcome of a boolean statement to determine its outcome
+//examine the inputs
+//process the outputs
+for example:
+how to process:
+public class IntsCalc {
+
+	public static void main (String[] args) {
+		int a = Integer.parseInt(args[0]);
+		int b = Integer.parseInt(args[1]);
+		if (a > 0 && b % 2 == 0) {
+			System.out.println(3*a);
+		} else {
+			System.out.println(2*a);
+		}
+	}
+}
+
+//draw the truth table
