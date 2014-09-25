@@ -6,8 +6,9 @@ public class Main {
 		Cat max = new Cat();
 		agentX.walks(max);
 		agentX.walks(max);
+		agentX.walks(max);
 		Cat superMax = new UberCat();
-		for (int i = 0; i < 5; ++i) {
+		for (int i = 0; i < 6; ++i) {
 			agentX.walks(superMax);
 		}
 	}
