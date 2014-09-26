@@ -7,7 +7,7 @@ public interface AdvancedMovement {
 	 * @param x
 	 * @param y
 	 */
-	public void launch(int x, int y);
+	public void moveTo(int x, int y);
 	
 
 }
