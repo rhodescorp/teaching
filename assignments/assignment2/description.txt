@@ -1,10 +1,5 @@
 Assignment 2 (due 10-9-2014)
-The Robot builder challenge.
-You have a robot that needs functionality.
-Your goal is to iteratively build on that functionality so that
-you can do more powerful things through the use
-of abstraction.
-Have higher level objects call on lower level objects to achieve
-what is needed.
+You have a card deck class. Your job is implement a hand analyzer, that is to 
+determine whether one hand is better than the other.
 
 Assignment 3 will be to test the functionality of your code

@@ -1,0 +1,9 @@
+
+The Robot builder challenge.
+You have a robot that needs functionality.
+Your goal is to iteratively build on that functionality so that
+you can do more powerful things through the use
+of abstraction.
+Have higher level objects call on lower level objects to achieve
+what is needed.
+
