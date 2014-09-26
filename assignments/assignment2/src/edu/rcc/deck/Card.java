@@ -30,6 +30,10 @@ public class Card {
 	public boolean isSameSuit(Card c) {
 		return this.suit.equals(c.getSuit());
 	}
+	
+	public boolean isSameFace(Card c) {
+		return this.face.equals(c.getFace());
+	}
 
 	/*
 	public Card(String suit, String face) {
