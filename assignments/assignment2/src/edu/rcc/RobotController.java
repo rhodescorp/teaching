@@ -1,6 +1,6 @@
 package edu.rcc;
 
-public class RobotController implements BasicMovement {
+public class RobotController implements BasicMovement, Position {
 
 	private Robot robot;
 	
@@ -30,6 +30,18 @@ public class RobotController implements BasicMovement {
 	public boolean moveEast() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int getXPosition() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getYPosition() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
