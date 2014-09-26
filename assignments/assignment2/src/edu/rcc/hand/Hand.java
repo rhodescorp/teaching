@@ -14,6 +14,7 @@ public class Hand {
 	
 	public int compareTo(Object o) {
 		//TODO
+		//THIS IS WHERE YOU WRITE YOUR CODE
 		return 0;
 	}
 }

@@ -1,5 +1,7 @@
 Assignment 2 (due 10-9-2014)
 You have a card deck class. Your job is implement a hand analyzer, that is to 
-determine whether one hand is better than the other.
+determine whether one hand is better than the other. Do this in the compare method.
+Your job is also to write the unit tests of your code to determine whether
+one hand in poker is better than another.
 
 Assignment 3 will be to test the functionality of your code
