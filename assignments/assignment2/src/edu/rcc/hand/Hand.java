@@ -32,9 +32,11 @@ public class Hand implements Comparable<Object> {
 			return 1;
 		}
 		Hand other = (Hand)o;
+		//call the card hierarchy class
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
 	
 
 }
