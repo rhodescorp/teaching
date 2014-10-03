@@ -1,4 +1,4 @@
-Assignment 2 (due 10-9-2014)
+Assignment 2 (due 10-16-2014)
 You have a card deck class. Your job is implement a hand analyzer, that is to 
 determine whether one hand is better than the other. Do this in the compare method.
 To compare hands of poker.

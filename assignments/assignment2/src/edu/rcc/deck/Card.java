@@ -15,6 +15,10 @@ public class Card {
 	 */
 	private String suit;
 	private String face;
+	/**
+	 * @param suit
+	 * @param face
+	 */
 	public Card(String suit, String face) {
 		super();
 		this.suit = suit;
@@ -33,6 +37,10 @@ public class Card {
 	
 	public boolean isSameFace(Card c) {
 		return this.face.equals(c.getFace());
+	}
+	
+	public String toString() {
+		return face + " of " + suit;
 	}
 
 	/*
