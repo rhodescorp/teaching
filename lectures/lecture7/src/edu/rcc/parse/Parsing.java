@@ -18,7 +18,7 @@ public class Parsing {
 			}
 		}
 		if (stack.peek() == '(') {
-			System.out.println("Error too many open parens);
+			System.out.println("Error too many open parens");
 		}
 		
 		String sentence = "the quick brown fox jumped over the lazy dog";

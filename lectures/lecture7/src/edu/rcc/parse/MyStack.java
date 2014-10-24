@@ -1,3 +1,5 @@
+package edu.rcc.parse;
+
 import java.util.*;
 
 public class MyStack {
@@ -24,6 +26,6 @@ public class MyStack {
   } 
   
   public void push(Character c) {
-    this.stack.insert(0, c);
+    this.stack.add(0, c);
   } 
 }
