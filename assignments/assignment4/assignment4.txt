@@ -1,4 +1,4 @@
-Assignment 4 Due 10-30-2014
+Assignment 4 Due 11-6-2014
 
 Your job will be to extend your poker application to solve Mavarick Solitaire.
 
