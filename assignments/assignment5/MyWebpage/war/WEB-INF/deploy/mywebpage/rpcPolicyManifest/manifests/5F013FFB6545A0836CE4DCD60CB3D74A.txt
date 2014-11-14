@@ -1,0 +1,2 @@
+serviceClass: edu.rcc.myproject.client.GreetingService
+path: 600050688E5E8ADF2B4079A22F0F9F59.gwt.rpc
