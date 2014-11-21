@@ -1,7 +1,10 @@
 package edu.rcc.myproject.server;
 
+import java.util.HashSet;
+
 import edu.rcc.myproject.client.GreetingService;
 import edu.rcc.myproject.shared.FieldVerifier;
+
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**
@@ -10,6 +13,8 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 public class GreetingServiceImpl extends RemoteServiceServlet implements
 		GreetingService {
+	
+	private HashSet<String> names = new HashSet<>();
 	
 	public String greetServer(String input) throws IllegalArgumentException {
 		// Verify that the input is valid. 
@@ -26,9 +31,17 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 		// Escape data from the client to avoid cross-site script vulnerabilities.
 		input = escapeHtml(input);
 		userAgent = escapeHtml(userAgent);
+		
+		if (this.names.contains(input)) {
+			return "Hello, welcome back " + input + "!<br><br>I am running " + serverInfo
+					+ ".<br><br>It looks like you are using:<br>" + userAgent;
+		} else {
+			this.names.add(input);
+			return "Hello, " + input + "!<br><br>I am running " + serverInfo
+					+ ".<br><br>It looks like you are using:<br>" + userAgent;
+		}
 
-		return "Hello, " + input + "!<br><br>I am running " + serverInfo
-				+ ".<br><br>It looks like you are using:<br>" + userAgent;
+		
 	}
 
 	/**
