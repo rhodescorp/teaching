@@ -1,1 +1,32 @@
 Final Review
+
+- types (int, float, String, double)
+- methods
+- Recursion
+- iterative methods
+- for loops
+- if else statements
+- while loops
+- writing code
+- determining the output of code
+- classes and objects
+- member variables
+- write a main (fully working program from a blank page)
+
+(will give any imports if needed)
+
+- java.util.ArrayList
+
+interviews will occur before the final exam
+Format
+- some multiple choice
+- free response
+
+- there will be extra credit
+
+- advice for studying:
+- run through an example from each topic
+- be able to regurgitate code from memory
+
+
+
