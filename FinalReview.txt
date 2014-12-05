@@ -18,6 +18,7 @@ Final Review
 (will give any imports if needed)
 
 - java.util.ArrayList
+- arrays
 
 interviews will occur before the final exam
 Format
