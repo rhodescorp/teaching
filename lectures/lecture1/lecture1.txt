@@ -1,0 +1,20 @@
+Lecture 1:
+- Syllabus
+- Course format
+	- use of git
+		- git example
+		
+git clone https://github.com/rhodescorp/teaching.git
+		
+
+	- quizzes
+- Textbook
+- Tips for doing well
+- Class experience query
+- What is Java
+- Programming like in general
+- Industry vs grad school
+- 
+
+CLRS Algorithms
+
