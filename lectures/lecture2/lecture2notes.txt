@@ -1,0 +1,50 @@
+Notes for the homework:
+- converting characters to int (ascii representation)
+char c = 'b';
+int asciiOfC = (int)c;
+char d = (char) asciiOfC;
+
+- modulus:
+int a = 13;
+int b = 5;
+int c = a + b;
+
+c = 13 % 5; //3
+13 mod 5 = 3
+
+Basic types:
+String s = "Hello class";
+Double d = 8.265;
+Boolean isRunning = true;
+boolean isStoped = false;
+s = null;
+
+
+Classes
+  - methods
+    - statements
+
+camelCase
+  - methods
+  - variables
+
+methods:
+  - parameters
+  - return types
+  - body
+
+Moores Law --> doubling computing capacity every 18 months:
+
+Variable Types:
+ 
+Class versions    primitives    range           bits
+Integer           integer       [-2^31, 2^31]   32 bits
+Double            double                        64 bits
+Boolean           boolean       true, false
+Character         char
+String
+
+
+
+Converting from String to Integer
+int a = Integer.parseInt("25");

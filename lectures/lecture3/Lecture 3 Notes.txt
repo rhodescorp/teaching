@@ -1,5 +1,15 @@
 Notes for 9/4/2014
-Today we will go over if statements.
+
+Today we will go over flow control
+Why is flow control useful?
+
+Previously, we had flow control through the use of goto statements in the 1960s
+  (a study was done showing that goto statements are both harder to program and understand)
+ 
+The hardest part of programming is developing the algorithm to solve the problem,
+once a correct algorithm has been developed, implementing it is usually straitforward.
+Its all about algorithms
+
 
 int a = 1;
 if (a == 2) {
@@ -26,7 +36,7 @@ public class LettersToFruit {
 	}
 }
 
-//Questionable Practice (Ternary operator)
+//Questionable Practice conditional operator (Ternary operator)
 //? : operator
 //use only in simple statements
 
